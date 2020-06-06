@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_profile">
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.project.pocketdoctor.ui.fragments.ProfileFragment"
+        android:label="@string/profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="com.project.pocketdoctor.ui.fragments.ServicesFragment"
+        android:label="@string/services"
+        tools:layout="@layout/fragment_services" />
+
+    <fragment
+        android:id="@+id/nav_card"
+        android:name="com.project.pocketdoctor.ui.fragments.CardFragment"
+        android:label="@string/card"
+        tools:layout="@layout/fragment_card" />
+
+    <fragment
+        android:id="@+id/nav_history"
+        android:name="com.project.pocketdoctor.ui.fragments.VisitsFragment"
+        android:label="@string/history"
+        tools:layout="@layout/fragment_visits" />
+
+    <fragment
+        android:id="@+id/nav_pills"
+        android:name="com.project.pocketdoctor.ui.fragments.PillsFragment"
+        android:label="@string/current_pills"
+        tools:layout="@layout/fragment_pills" />
+</navigation>

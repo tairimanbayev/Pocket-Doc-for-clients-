@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Pocket Doctor</string>
+    <string name="password">Пароль</string>
+    <string name="login">Авторизоваться</string>
+    <string name="logout">Выйти</string>
+    <string name="missing_number">Заполните номер телефона</string>
+    <string name="missing_password">Введите пароль</string>
+
+    <string name="name_format">%1$s %2$s</string>
+    <string name="reason">Причина:</string>
+    <string name="bound_card">Привязанная карта</string>
+    <string name="not_assigned">Не назначен</string>
+    <string name="visits_history">История вызовов</string>
+
+    <string name="bind_card">Привязать медкарту</string>
+    <string name="fill_data">Заполните данные</string>
+    <string name="next">Далее</string>
+    <string name="patients">Пациенты:</string>
+    <string name="select_reasons">Укажите причины:</string>
+
+    <string name="visit_date">Время приёма:</string>
+    <string name="visit_time">Время приёма</string>
+    <string name="watch_visit">Просмотр вызова</string>
+    <string name="your_doctor">Ваш врач</string>
+
+    <string name="height">Рост</string>
+    <string name="weight">Вес</string>
+    <string name="save">Сохранить</string>
+    <string name="call_create_date">Время обращения:</string>
+    <string name="call_create_time">Время обращения</string>
+    <string name="call_id">Вызов №%d</string>
+    <string name="date">%02d.%02d.%04d</string>
+    <string name="diagnosis">Диагноз</string>
+    <string name="confirm_card_delete">Вы действительно хотите удалить медкарту?</string>
+    <string name="confirm_logout">Вы уверены что хотите выйти?</string>
+    <string name="complaint">Жалоба</string>
+    <string name="appointment">Назначение</string>
+    <string name="inspection">Осмотр</string>
+    <string name="result">Результат</string>
+    <string name="doctor_deleted">Врач №%d удален</string>
+    <string name="add">Добавить</string>
+    <string name="empty_list">Список пуст</string>
+    <string name="last_name">Фамилия</string>
+    <string name="first_name">Имя</string>
+    <string name="middle_name">Отчество</string>
+    <string name="birthday">Дата рождения</string>
+    <string name="gender">Пол:</string>
+    <string name="male">Мужской</string>
+    <string name="female">Женский</string>
+    <string name="email">E-mail</string>
+    <string name="edit">Редактировать</string>
+    <string name="empty_field">Заполните поле</string>
+    <string name="success_edit">Профиль успешно сохранен</string>
+    <string name="image_upload_failure">Не удалось загрузить фотографию</string>
+    <string name="profile">Профиль</string>
+    <string name="services">Услуги</string>
+    <string name="card">Медкарта</string>
+    <string name="history">История вызовов</string>
+    <string name="current_pills">Текущие лекарства</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+</resources>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ImageView
+        android:id="@+id/iv_doctor"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_toolbar" />
+
+    <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:id="@+id/lbl_your_doctor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/your_doctor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_doctor" />
+
+    <TextView
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:id="@+id/tv_doctor_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_assigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_your_doctor" />
+
+    <TextView
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:id="@+id/tv_doctor_role"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doctor_name" />
+
+    <View
+        android:id="@+id/layout_call"
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_call_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doctor_role" />
+
+    <TextView
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:id="@+id/tv_call_id"
+        android:paddingBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layout_call" />
+
+    <TextView
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_call_id" />
+
+    <ImageView
+        android:id="@+id/iv_card"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_profile"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/layout_call" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_card"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Кому?"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_card"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintStart_toEndOf="@+id/iv_card"
+        app:layout_constraintTop_toTopOf="@+id/iv_card" />
+
+    <View
+        android:background="@color/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/iv_card" />
+
+    <ImageView
+        android:id="@+id/iv_address"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_address"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/iv_card" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Куда?"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_address"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/tv_card"
+        app:layout_constraintTop_toTopOf="@+id/iv_address" />
+
+    <View
+        android:background="@color/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toBottomOf="@+id/iv_address" />
+
+    <ImageView
+        android:id="@+id/iv_time"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_time"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_visit_time"
+        app:layout_constraintStart_toStartOf="@+id/gl_start"
+        app:layout_constraintTop_toTopOf="@+id/lbl_create_time" />
+
+    <TextView
+        android:id="@+id/lbl_create_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/call_create_time"
+        app:layout_constraintStart_toStartOf="@+id/tv_card"
+        app:layout_constraintTop_toBottomOf="@+id/iv_address" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_create_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Когда?"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/tv_card"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_create_time" />
+
+    <TextView
+        android:id="@+id/lbl_visit_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/visit_time"
+        app:layout_constraintStart_toStartOf="@+id/tv_card"
+        app:layout_constraintTop_toBottomOf="@+id/tv_create_time" />
+
+    <TextView
+        android:textSize="16sp"
+        android:gravity="center_vertical"
+        android:id="@+id/tv_visit_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Когда?"
+        app:layout_constraintEnd_toEndOf="@+id/gl_end"
+        app:layout_constraintStart_toStartOf="@+id/tv_card"
+        app:layout_constraintTop_toBottomOf="@+id/lbl_visit_time" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@+id/gl_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:orientation="vertical"
+        android:id="@+id/gl_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

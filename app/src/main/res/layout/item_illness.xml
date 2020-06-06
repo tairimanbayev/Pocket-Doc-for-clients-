@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_doctor"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_doctor_role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_doctor_name"
+            app:layout_constraintStart_toEndOf="@+id/iv_doctor"
+            app:layout_constraintTop_toTopOf="@+id/iv_doctor" />
+
+        <TextView
+            android:textSize="18sp"
+            android:id="@+id/tv_doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_doctor"
+            app:layout_constraintStart_toStartOf="@+id/tv_doctor_role"
+            app:layout_constraintTop_toBottomOf="@+id/tv_doctor_role" />
+
+        <TextView
+            android:id="@+id/lbl_diagnosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/diagnosis"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_doctor" />
+
+        <TextView
+            android:id="@+id/lbl_complaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/complaint"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_diagnosis" />
+
+        <TextView
+            android:id="@+id/lbl_inspection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/inspection"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_complaint" />
+
+        <TextView
+            android:id="@+id/lbl_appointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/appointment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_inspection" />
+
+        <TextView
+            android:id="@+id/lbl_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/result"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lbl_appointment" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_diagnosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_diagnosis"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_complaint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_complaint"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_inspection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_inspection"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_appointment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_appointment"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:textColor="@android:color/black"
+            android:id="@+id/tv_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@+id/lbl_result"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

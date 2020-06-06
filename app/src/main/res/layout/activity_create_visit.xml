@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/layout_toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"
+        app:layout_constraintTop_toBottomOf="@+id/layout_toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onCardClick"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/ic_profile"
+                app:layout_constraintStart_toStartOf="@+id/gl_start"
+                app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+            <TextView
+                android:id="@+id/tv_card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:onClick="onCardClick"
+                android:text="Кому?"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_card"
+                app:layout_constraintEnd_toEndOf="@+id/gl_end"
+                app:layout_constraintStart_toEndOf="@+id/iv_card"
+                app:layout_constraintTop_toTopOf="@+id/iv_card" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                app:layout_constraintEnd_toEndOf="@+id/gl_end"
+                app:layout_constraintStart_toStartOf="@+id/gl_start"
+                app:layout_constraintTop_toBottomOf="@+id/iv_card" />
+
+            <ImageView
+                android:id="@+id/iv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onTimeClick"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/ic_time"
+                app:layout_constraintStart_toStartOf="@+id/gl_start"
+                app:layout_constraintTop_toBottomOf="@+id/iv_card" />
+
+            <TextView
+                android:id="@+id/tv_time"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:onClick="onTimeClick"
+                android:text="Когда?"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_time"
+                app:layout_constraintEnd_toEndOf="@+id/gl_end"
+                app:layout_constraintStart_toEndOf="@+id/iv_time"
+                app:layout_constraintTop_toTopOf="@+id/iv_time" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/divider"
+                app:layout_constraintEnd_toEndOf="@+id/gl_end"
+                app:layout_constraintStart_toStartOf="@+id/gl_start"
+                app:layout_constraintTop_toBottomOf="@+id/iv_time" />
+
+            <ImageView
+                android:id="@+id/iv_reason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:src="@drawable/ic_reason"
+                app:layout_constraintStart_toStartOf="@+id/gl_start"
+                app:layout_constraintTop_toBottomOf="@+id/iv_time" />
+
+            <EditText
+                android:id="@+id/et_reason"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:inputType="textCapSentences"
+                android:hint="Причина обращения"
+                android:textColorHint="@android:color/tertiary_text_dark"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_reason"
+                app:layout_constraintEnd_toEndOf="@+id/gl_end"
+                app:layout_constraintStart_toEndOf="@+id/iv_reason"
+                app:layout_constraintTop_toTopOf="@+id/iv_reason" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="20dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="20dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="onNextClick"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
